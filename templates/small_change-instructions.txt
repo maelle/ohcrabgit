@@ -1,0 +1,4 @@
+Oh shit, I committed and immediately realized I need to make one small change!
+I wanted to list 3 things in my bla file, not only two!
+See https://ohshitgit.com/#change-last-commit
+For more help use the tips.txt file.
