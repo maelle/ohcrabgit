@@ -12,8 +12,7 @@ pub fn exo() {
     let gitignore = path.join(".gitignore");
     let _ = fs::copy("templates/gitignore.txt", &gitignore);
     git::add_file(&path_str, ".gitignore");
-    let message = "git ignore";
-    git::first_commit(&path_str, &message);
+    git::first_commit(&path_str, "git ignore");
 
     let instructions = path.join("instructions.txt");
     let _ = fs::copy("templates/small_change-instructions.txt", &instructions);
@@ -27,8 +26,7 @@ pub fn exo() {
     fs::write(&bla, "thing1\nthing2").unwrap();
 
     git::add_file(&path_str, "bla");
-    let message = "feat: add bla";
-    git::commit_all(&path_str, &message);
+    git::commit(&path_str,"feat: add bla");
 
     println!("{}", path.display())
 }

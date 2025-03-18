@@ -17,7 +17,7 @@ pub fn add_file(
     let file = Path::new(file);
     let repo = Repository::open(path).expect("failed to open");
     let mut index = repo.index().expect("cannot get the Index file");
-    // todo add one only explicitly
+  
     index.add_path(file).unwrap();
     index.write().unwrap();
 }
@@ -58,7 +58,7 @@ pub fn first_commit(
     ).expect("bug");
 }
 
-pub fn commit_all(
+pub fn commit(
     path: &str,
     message: &str
 ) {
