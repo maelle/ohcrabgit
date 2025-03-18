@@ -14,6 +14,12 @@ pub fn exo() {
     let message = "git ignore";
     git::first_commit(&path, &message);
 
+    let instructions = format!("{}/instructions.txt", path);
+    let _ = fs::copy("templates/small_change-instructions.txt", instructions);
+
+    let tip = format!("{}/tip.txt", path);
+    let _ = fs::copy("templates/small_change-tip.txt", tip);
+
     // todo: need to create the path as with file.path()
     let bla = format!("{}/bla", path);
     File::create(&bla).unwrap();
