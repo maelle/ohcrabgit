@@ -1,3 +1,4 @@
+use std::env;
 use git2::Repository;
 use git2::IndexAddOption;
 use git2::Signature;
@@ -7,6 +8,30 @@ use std::fs::File;
 use time::macros::{datetime};
 
 fn main() {
+    let args: Vec<String> = env::args().collect();
+    let exo = &args[1];
+    if !exos().contains(&exo) {
+        panic!("No exercise of this name!");
+    }
+
+    launch_exo(&exo);
+}
+
+fn exos()  -> Vec<String> {
+    vec!["small_change".to_string()]
+}
+
+fn launch_exo(
+    exo: &String
+) {
+    let to_match = exo.as_str();
+    match to_match {
+        "small_change" => small_change(),
+        &_ => println!("{}", "error")
+    }
+}
+
+fn small_change() {
     let path = "../exo-small-change";
     fs::create_dir(path).unwrap();
     Repository::init(path).unwrap();
