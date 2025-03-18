@@ -16,7 +16,6 @@ The binary lives in `target/release/ohcrabgit` but I need to remember to update 
 ## Current issues/ideas
 
 - how best to create file paths.
-- how to add one file at a time.
 - where to best create exercises folders (temporary directory).
 - display a list of possible exercises.
 - do not panic if no argument.
