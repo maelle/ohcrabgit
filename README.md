@@ -19,6 +19,7 @@ Currently only `ohcrabgit small-change` and `ohcrabgit latest-message` will work
 It will print the folder name so that you might open it.
 In this folder, open the `instructions.txt` file to know what the exercise is about.
 
+
 ## Development notes
 
 Use `--` as separator between arguments for cargo and arguments for ohcrabgit.
