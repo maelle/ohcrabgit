@@ -26,5 +26,8 @@ cargo run -- -e small_change
 
 - display a list of possible exercises.
 - how to document the thing.
+- add tests.
+- add CI for building the target.
+- add all saperlipopette exercises.
 - ...
 
