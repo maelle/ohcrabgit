@@ -12,7 +12,7 @@ pub fn exo() -> String {
     if !fs::exists(&parent_path).unwrap() {
         fs::create_dir(&parent_path).unwrap();
     }
-    let path = parent_path.join("exo-small_change");
+    let path = parent_path.join("exo-latest_message");
     let path_str =  &path.to_str().unwrap();
     fs::create_dir(&path).expect(&path_str);
     git::repo_init(&path_str);
@@ -23,10 +23,10 @@ pub fn exo() -> String {
     git::first_commit(&path_str, "git ignore");
 
     let instructions = path.join("instructions.txt");
-    let _ = fs::copy("templates/small_change-instructions.txt", &instructions);
+    let _ = fs::copy("templates/latest_message-instructions.txt", &instructions);
 
     let tip = path.join("tip.txt");
-    let _ = fs::copy("templates/small_change-tip.txt", &tip);
+    let _ = fs::copy("templates/latest_message-tip.txt", &tip);
 
     // todo: need to create the path as with file.path()
     let bla = path.join("bla");
@@ -34,7 +34,7 @@ pub fn exo() -> String {
     fs::write(&bla, "thing1\nthing2").unwrap();
 
     git::add_file(&path_str, "bla");
-    git::commit(&path_str,"feat: add bla");
+    git::commit(&path_str,"add a new documennnt");
 
     println!("{}", path.display());
     return path.to_str().unwrap().to_string();

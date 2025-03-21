@@ -1,4 +1,5 @@
 pub mod small_change;
+pub mod latest_message;
 use clap::Parser;
 
 #[derive(Parser, Debug)]
@@ -22,15 +23,16 @@ fn main() {
 }
 
 fn exos()  -> Vec<String> {
-    vec!["small_change".to_string()]
+    vec!["small_change".to_string(), "latest_message".to_string()]
 }
 
 fn launch_exo(
     exo: &String
-) {
+) -> String {
     let to_match = exo.as_str();
     match to_match {
         "small_change" => small_change::exo(),
-        &_ => println!("{}", "error")
+        "latest_message" => latest_message::exo(),
+        &_ => "Unreachable".to_string()
     }
 }

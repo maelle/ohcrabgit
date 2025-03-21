@@ -1,0 +1,4 @@
+Oh shit, I need to change the message on my last commit!
+I made a typo!
+See https://ohshitgit.com/#change-last-commit-message}
+For more help use the tips.txt file.
