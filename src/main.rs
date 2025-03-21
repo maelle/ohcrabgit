@@ -1,38 +1,33 @@
 pub mod small_change;
 pub mod latest_message;
-use clap::Parser;
+use clap::{Parser, ValueEnum};
 
-#[derive(Parser, Debug)]
+#[derive(Parser)]
 #[command(version, about, long_about = None)]
-struct Args {
+struct Cli {
     /// Name of the exercise
-    #[arg(short, long)]
-    exo: String
+    #[arg(value_enum)]
+    exo: Exo
 }
 
+#[derive(Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ValueEnum)]
+enum Exo {
+    /// Oh shit, I committed and immediately realized I need to make one small change!
+    SmallChange,
+    /// Oh shit, I need to change the message on my last commit!
+    LatestMessage,
+}
 
 fn main() {
-    let args = Args::parse();
+    let cli = Cli::parse();
 
-    let exo = &args.exo;
-    if !exos().contains(&exo) {
-        panic!("No exercise of this name!");
-    }
-
-    launch_exo(&exo);
-}
-
-fn exos()  -> Vec<String> {
-    vec!["small_change".to_string(), "latest_message".to_string()]
-}
-
-fn launch_exo(
-    exo: &String
-) -> String {
-    let to_match = exo.as_str();
-    match to_match {
-        "small_change" => small_change::exo(),
-        "latest_message" => latest_message::exo(),
-        &_ => "Unreachable".to_string()
+    match cli.exo {
+        Exo::SmallChange => {
+            small_change::exo();
+        }
+        Exo::LatestMessage => {
+            latest_message::exo();
+        }
     }
 }
+
