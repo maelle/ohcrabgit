@@ -1,12 +1,20 @@
 use std::fs;
 use std::fs::File;
-use std::path::Path;
+use std::env;
 use ohcrabgit::git;
+use rand::Rng;
 
 pub fn exo() {
-    let path_str =  "../exo-small-change";
-    let path = Path::new(&path_str);
-    fs::create_dir(path).unwrap();
+    let tmp_dir = env::temp_dir();
+    let random_string = rand::rng().random_range(1..10001).to_string();
+    let random_path = "ohcrabgit".to_string() + &random_string;
+    let parent_path = tmp_dir.join(random_path);
+    if !fs::exists(&parent_path).unwrap() {
+        fs::create_dir(&parent_path).unwrap();
+    }
+    let path = parent_path.join("exo-small-change");
+    let path_str =  &path.to_str().unwrap();
+    fs::create_dir(&path).expect(&path_str);
     git::repo_init(&path_str);
 
     let gitignore = path.join(".gitignore");
@@ -28,5 +36,6 @@ pub fn exo() {
     git::add_file(&path_str, "bla");
     git::commit(&path_str,"feat: add bla");
 
-    println!("{}", path.display())
+    println!("{}", path.display());
+    path.to_str().unwrap();
 }
