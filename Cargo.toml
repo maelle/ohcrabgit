@@ -9,3 +9,5 @@ include = ["templates/"]
   time = { version = "0.3", features = ["macros"] }
   tempfile = "3"
   rand = "0.9.0"
+  clap = { version = "4.5.32", features = ["derive"] }
+  clap_derive = { version = "4.0.0-rc.1" }

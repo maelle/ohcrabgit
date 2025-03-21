@@ -1,9 +1,19 @@
-use std::env;
 pub mod small_change;
+use clap::Parser;
+
+#[derive(Parser, Debug)]
+#[command(version, about, long_about = None)]
+struct Args {
+    /// Name of the exercise
+    #[arg(short, long)]
+    exo: String
+}
+
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
-    let exo = &args[1];
+    let args = Args::parse();
+
+    let exo = &args.exo;
     if !exos().contains(&exo) {
         panic!("No exercise of this name!");
     }
