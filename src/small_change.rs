@@ -1,17 +1,15 @@
 use std::fs;
 use std::fs::File;
-use std::env;
 use ohcrabgit::git;
-use rand::Rng;
+use ohcrabgit::path;
 
-pub fn exo() -> String {
-    let tmp_dir = env::temp_dir();
-    let random_string = rand::rng().random_range(1..1000001).to_string();
-    let random_path = "ohcrabgit".to_string() + &random_string;
-    let parent_path = tmp_dir.join(random_path);
-    if !fs::exists(&parent_path).unwrap() {
-        fs::create_dir(&parent_path).unwrap();
-    }
+
+pub fn exo(
+    target: String
+) -> String {
+
+    let parent_path = path::create_target(target);
+
     let path = parent_path.join("exo-small_change");
     let path_str =  &path.to_str().unwrap();
     fs::create_dir(&path).expect(&path_str);
@@ -42,7 +40,7 @@ pub fn exo() -> String {
 
 #[test]
 fn it_works() {
-    let dir = exo();
+    let dir = exo("tempdir".to_string());
     println!("{}", dir);
     assert!(fs::exists(&dir).unwrap());
 

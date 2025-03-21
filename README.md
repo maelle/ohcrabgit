@@ -15,12 +15,36 @@ This needs to be improved. :sweat_smile:
 
 ## Current exercises
 
-Currently only `ohcrabgit small-change` and `ohcrabgit latest-message` will work and create a folder `exo-small_change` in a temporary directory, whose name starts with `ohcrabgit`.
-It will print the folder name so that you might open it.
-In this folder, open the `instructions.txt` file to know what the exercise is about.
+To see help
+
+```
+ohcrabgit --help
+```
+
+```
+Usage: ohcrabgit <EXO>[TARGET]. In the exercise folder, open instructions.txt.
+
+Arguments:
+  <EXO>
+          Name of the exercise
+
+          Possible values:
+          - small-change:   Oh shit, I committed and immediately realized I need to make one small change!
+          - latest-message: Oh shit, I need to change the message on my last commit!
+
+  [TARGET]
+          Where to create the exercise directory. Default: temporary directory
+          
+          [default: tempdir]
+```
+
+Examples:
+
+- `ohcrabgit small-change` creates the small-change exercise folder in a temporary folder.
+- `ohcrabgit latest-message ..` creates the latest-message exercise folder in the parent of the current folder.
 
 
-## Development notes
+## Dev notes
 
 Use `--` as separator between arguments for cargo and arguments for ohcrabgit.
 

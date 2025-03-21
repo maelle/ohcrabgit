@@ -4,10 +4,14 @@ use clap::{Parser, ValueEnum};
 
 #[derive(Parser)]
 #[command(version, about, long_about = None)]
+#[clap(override_usage = "ohcrabgit <EXO>[TARGET]. In the exercise folder, open instructions.txt.")]
 struct Cli {
     /// Name of the exercise
     #[arg(value_enum)]
-    exo: Exo
+    exo: Exo,
+    #[arg(default_value = "tempdir")]
+    /// Where to create the exercise directory. Default: temporary directory.
+    target: Option<String>
 }
 
 #[derive(Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ValueEnum)]
@@ -21,12 +25,14 @@ enum Exo {
 fn main() {
     let cli = Cli::parse();
 
+    let target = cli.target.unwrap();
+
     match cli.exo {
         Exo::SmallChange => {
-            small_change::exo();
+            small_change::exo(target);
         }
         Exo::LatestMessage => {
-            latest_message::exo();
+            latest_message::exo(target);
         }
     }
 }
