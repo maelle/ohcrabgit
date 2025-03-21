@@ -1,0 +1,4 @@
+I mistakenly run {.code git reset hard} so lost my feature commit.
+I want to get it back!
+See https://ohshitgit.com/#magic-time-machine
+For more help use {.run tip()}

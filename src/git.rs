@@ -88,3 +88,12 @@ pub fn commit(
         &[&parent_commit]
     ).expect("bug");
 }
+
+pub fn reset_hard(
+    path: &str,
+    ancestry: &str,
+) {
+    let repo = Repository::open(path).expect("failed to open");
+    let object = repo.revparse_single(ancestry).unwrap();
+    repo.reset(&object, git2::ResetType::Hard, None).unwrap();
+}

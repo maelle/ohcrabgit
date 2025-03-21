@@ -1,5 +1,6 @@
 pub mod small_change;
 pub mod latest_message;
+pub mod time_machine;
 use clap::{Parser, ValueEnum};
 
 #[derive(Parser)]
@@ -24,6 +25,8 @@ enum Exo {
     SmallChange,
     /// Oh shit, I need to change the message on my last commit!
     LatestMessage,
+    /// Oh shit, I did something terribly wrong, please tell me git has a magic time machine!?!
+    TimeMachine,
 }
 
 fn main() {
@@ -37,6 +40,9 @@ fn main() {
         }
         Exo::LatestMessage => {
             latest_message::exo(target);
+        }
+        Exo::TimeMachine => {
+            time_machine::exo(target);
         }
     }
 }

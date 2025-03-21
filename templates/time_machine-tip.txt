@@ -1,0 +1,4 @@
+git reflog
+git reset --hard HEAD@{1}
+Note that --hard does not always make sense, but git reset is always the command.
+Examine Git history.
