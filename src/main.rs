@@ -5,6 +5,10 @@ use clap::{Parser, ValueEnum};
 #[derive(Parser)]
 #[command(version, about, long_about = None)]
 #[clap(override_usage = "ohcrabgit <EXO>[TARGET]. In the exercise folder, open instructions.txt.")]
+#[clap(after_help = "Examples:
+
+`ohcrabgit small-change` creates the small-change exercise folder in a temporary folder.
+`ohcrabgit latest-message ..` creates the latest-message exercise folder in the parent of the current folder.")]
 struct Cli {
     /// Name of the exercise
     #[arg(value_enum)]

@@ -36,13 +36,12 @@ Arguments:
           Where to create the exercise directory. Default: temporary directory
           
           [default: tempdir]
-```
 
 Examples:
 
-- `ohcrabgit small-change` creates the small-change exercise folder in a temporary folder.
-- `ohcrabgit latest-message ..` creates the latest-message exercise folder in the parent of the current folder.
-
+`ohcrabgit small-change` creates the small-change exercise folder in a temporary folder.
+`ohcrabgit latest-message ..` creates the latest-message exercise folder in the parent of the current folder.
+```
 
 ## Dev notes
 
