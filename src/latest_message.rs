@@ -9,8 +9,8 @@ pub fn exo(
 ) -> String {
 
     let parent_path = path::create_target(target);
-
     let path = git::init_playground(&parent_path, "latest_message");
+    
     // Create the Git mess :-)
     let bla = path.join("bla");
     File::create(&bla).unwrap();

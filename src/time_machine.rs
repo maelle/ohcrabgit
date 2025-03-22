@@ -9,7 +9,6 @@ pub fn exo(
 ) -> String {
 
     let parent_path = path::create_target(target);
-
     let path = git::init_playground(&parent_path, "time_machine");
 
     // Create the Git mess :-)
