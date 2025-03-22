@@ -10,7 +10,7 @@ pub fn exo(
 
     let parent_path = path::create_target(target);
     let path = git::init_playground(&parent_path, "latest_message");
-    
+
     // Create the Git mess :-)
     let bla = path.join("bla");
     File::create(&bla).unwrap();
@@ -26,7 +26,6 @@ pub fn exo(
 #[test]
 fn it_works() {
     let dir = exo("tempdir".to_string());
-    println!("{}", dir);
     assert!(fs::exists(&dir).unwrap());
 
     let git_dir = dir + "/.git";

@@ -28,7 +28,6 @@ pub fn exo(
 #[test]
 fn it_works() {
     let dir = exo("tempdir".to_string());
-    println!("{}", dir);
     assert!(fs::exists(&dir).unwrap());
 
     let git_dir = dir + "/.git";
