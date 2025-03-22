@@ -11,15 +11,14 @@ pub fn exo(
     let parent_path = path::create_target(target);
 
     let path = git::init_playground(&parent_path, "small_change");
-    let path_str =  &path.to_str().unwrap();
 
     // Create the Git mess :-)
     let bla = path.join("bla");
     File::create(&bla).unwrap();
     fs::write(&bla, "thing1\nthing2").unwrap();
 
-    git::add_file(&path_str, "bla");
-    git::commit(&path_str,"feat: add bla");
+    git::add_file(&path, "bla");
+    git::commit(&path,"feat: add bla");
 
     println!("{}", path.display());
     return path.to_str().unwrap().to_string();

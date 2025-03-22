@@ -7,13 +7,13 @@ use std::path::Path;
 use std::path::PathBuf;
 
 pub fn repo_init (
-    path: &str
+    path: &PathBuf
 ) {
     Repository::init(path).unwrap();
 }
 
 pub fn add_file(
-    path: &str,
+    path: &PathBuf,
     file: &str,
 ) {
     let file = Path::new(file);
@@ -38,7 +38,7 @@ pub fn ohcrab_signature() -> Signature<'static> {
 }
 
 pub fn first_commit(
-    path: &str,
+    path: &PathBuf,
     message: &str
 ) {
 
@@ -61,7 +61,7 @@ pub fn first_commit(
 }
 
 pub fn commit(
-    path: &str,
+    path: &PathBuf,
     message: &str
 ) {
     let repo = Repository::open(path).expect("failed to open");
@@ -92,7 +92,7 @@ pub fn commit(
 }
 
 pub fn reset_hard(
-    path: &str,
+    path: &PathBuf,
     ancestry: &str,
 ) {
     let repo = Repository::open(path).expect("failed to open");
@@ -110,12 +110,12 @@ pub fn init_playground(
     let path = parent_path.join(folder_str);
     let path_str =  &path.to_str().unwrap();
     fs::create_dir(&path).expect(&path_str);
-    repo_init(&path_str);
+    repo_init(&path);
 
     let gitignore = path.join(".gitignore");
     let _ = fs::copy("templates/gitignore.txt", &gitignore);
-    add_file(&path_str, ".gitignore");
-    first_commit(&path_str, "git ignore");
+    add_file(&path, ".gitignore");
+    first_commit(&path, "git ignore");
 
     let instructions = path.join("instructions.txt");
     let instructions_template = format!("templates/{}-instructions.txt", &playground.to_string());
