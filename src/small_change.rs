@@ -10,23 +10,10 @@ pub fn exo(
 
     let parent_path = path::create_target(target);
 
-    let path = parent_path.join("exo-small_change");
+    let path = git::init_playground(&parent_path, "small_change");
     let path_str =  &path.to_str().unwrap();
-    fs::create_dir(&path).expect(&path_str);
-    git::repo_init(&path_str);
 
-    let gitignore = path.join(".gitignore");
-    let _ = fs::copy("templates/gitignore.txt", &gitignore);
-    git::add_file(&path_str, ".gitignore");
-    git::first_commit(&path_str, "git ignore");
-
-    let instructions = path.join("instructions.txt");
-    let _ = fs::copy("templates/small_change-instructions.txt", &instructions);
-
-    let tip = path.join("tip.txt");
-    let _ = fs::copy("templates/small_change-tip.txt", &tip);
-
-    // todo: need to create the path as with file.path()
+    // Create the Git mess :-)
     let bla = path.join("bla");
     File::create(&bla).unwrap();
     fs::write(&bla, "thing1\nthing2").unwrap();
@@ -41,7 +28,6 @@ pub fn exo(
 #[test]
 fn it_works() {
     let dir = exo("tempdir".to_string());
-    println!("{}", dir);
     assert!(fs::exists(&dir).unwrap());
 
     let git_dir = dir + "/.git";

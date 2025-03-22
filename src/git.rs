@@ -1,8 +1,10 @@
+use std::fs;
 use git2::Repository;
 use git2::Signature;
 use git2::Time;
 use time::macros::{datetime};
 use std::path::Path;
+use std::path::PathBuf;
 
 pub fn repo_init (
     path: &str
@@ -96,4 +98,32 @@ pub fn reset_hard(
     let repo = Repository::open(path).expect("failed to open");
     let object = repo.revparse_single(ancestry).unwrap();
     repo.reset(&object, git2::ResetType::Hard, None).unwrap();
+}
+
+
+pub fn init_playground(
+    parent_path: &PathBuf,
+    playground: &str,
+)-> PathBuf {
+
+    let folder_str = "exo-".to_string() + &playground;
+    let path = parent_path.join(folder_str);
+    let path_str =  &path.to_str().unwrap();
+    fs::create_dir(&path).expect(&path_str);
+    repo_init(&path_str);
+
+    let gitignore = path.join(".gitignore");
+    let _ = fs::copy("templates/gitignore.txt", &gitignore);
+    add_file(&path_str, ".gitignore");
+    first_commit(&path_str, "git ignore");
+
+    let instructions = path.join("instructions.txt");
+    let instructions_template = format!("templates/{}-instructions.txt", &playground.to_string());
+    let _ = fs::copy(&instructions_template, &instructions);
+
+    let tip = path.join("tip.txt");
+    let tip_template = format!("templates/{}-tip.txt", &playground.to_string());
+    let _ = fs::copy(&tip_template, &tip);
+
+    return path;
 }
