@@ -32,6 +32,7 @@ Arguments:
           - small-change:   Oh shit, I committed and immediately realized I need to make one small change!
           - latest-message: Oh shit, I need to change the message on my last commit!
           - time-machine:   Oh shit, I did something terribly wrong, please tell me git has a magic time machine!?!
+          - committed-to-main: Oh shit, I accidentally committed something to master that should have been on a brand new branch!
 
   [TARGET]
           Where to create the exercise directory. Default: temporary directory

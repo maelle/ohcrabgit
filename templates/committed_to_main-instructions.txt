@@ -1,0 +1,4 @@
+Oh shit, I accidentally committed something to main that should have been on a brand new branch!
+I wanted my last commit, that created bla, to be on a new branch!
+See https://ohshitgit.com/#accidental-commit-master
+For more help use the tips.txt file.

@@ -1,0 +1,7 @@
+Examine Git history.
+Check you are on the main branch
+git branch feat-bla
+If you are no longer on the main branch, git checkout main
+git reset HEAD~ --hard
+git checkout feat-bla
+Examine Git history of the main and feat-bla branches.
