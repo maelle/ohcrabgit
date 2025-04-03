@@ -127,3 +127,23 @@ pub fn init_playground(
 
     return path;
 }
+
+pub fn create_branch(
+    path: &PathBuf,
+    branch_name: &str
+) {
+    let repo = Repository::open(path).expect("failed to open");
+    let parent_commit = repo.head().unwrap().peel_to_commit().unwrap();
+    repo.branch(
+    &branch_name,
+    &parent_commit,
+    true,
+    ).unwrap();
+
+    // https://stackoverflow.com/a/67240436
+    let  (object, reference) = repo.revparse_ext(branch_name).unwrap();
+    repo.checkout_tree(&object, None).unwrap();
+    repo.set_head(&reference.unwrap().name().unwrap()).expect("Failed to set HEAD");
+
+    println!("{}", repo.head().unwrap().name().unwrap());
+}

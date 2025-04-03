@@ -1,0 +1,4 @@
+Oh shit, I accidentally committed to the wrong branch!
+I wanted my last commit, that created bla, to be on the feat-bla branch not hot-fix!
+See https://ohshitgit.com/#accidental-commit-wrong-branch
+For more help use the tips.txt file.

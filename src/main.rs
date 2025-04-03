@@ -1,7 +1,8 @@
+pub mod time_machine;
 pub mod small_change;
 pub mod latest_message;
-pub mod time_machine;
 pub mod committed_to_main;
+pub mod committed_to_wrong;
 use clap::{Parser, ValueEnum};
 
 #[derive(Parser)]
@@ -30,6 +31,8 @@ enum Exo {
     LatestMessage,
     /// Oh shit, I accidentally committed something to master that should have been on a brand new branch!
     CommittedToMain,
+    /// Oh shit, I accidentally committed to the wrong branch!
+    CommittedToWrong
 }
 
 fn main() {
@@ -49,6 +52,9 @@ fn main() {
         }
         Exo::CommittedToMain => {
             committed_to_main::exo(target);
+        }
+        Exo::CommittedToWrong => {
+            committed_to_wrong::exo(target);
         }
     }
 }
