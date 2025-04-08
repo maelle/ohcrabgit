@@ -48,6 +48,13 @@ Examples:
 `ohcrabgit latest-message ..` creates the latest-message exercise folder in the parent of the current folder.
 ```
 
+## Why the name
+
+Many exercises follow ["Oh shit, Git!"](https://ohshitgit.com/) by Katie Sylor-Miller.
+"Oh crap, Git!" would mean the same.
+"Oh crab, Git!" refers to Rust. :crab:
+I am open to changing the name to something easier to type later on.
+
 ## Dev notes
 
 Use `--` as separator between arguments for cargo and arguments for ohcrabgit.
