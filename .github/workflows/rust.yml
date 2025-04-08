@@ -12,7 +12,10 @@ env:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
 
     steps:
     - uses: actions/checkout@v4
@@ -22,5 +25,5 @@ jobs:
       run: cargo test --verbose
     - uses: actions/upload-artifact@v4
       with:
-        name: ohcrabgit-binary
+        name: ohcrabgit-binary-${{ matrix.os }}
         path: target/release/ohcrabgit
