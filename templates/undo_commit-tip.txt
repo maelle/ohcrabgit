@@ -1,0 +1,3 @@
+Examine Git history.
+git revert <hash-you-see>
+Examine Git history and your files.

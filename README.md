@@ -34,6 +34,7 @@ Arguments:
           - time-machine:   Oh shit, I did something terribly wrong, please tell me git has a magic time machine!?!
           - committed-to-main: Oh shit, I accidentally committed something to master that should have been on a brand new branch!
           - committed-to-wrong: Oh shit, I accidentally committed to the wrong branch!
+          - undo-commit:        Oh shit, I need to undo a commit from like 5 commits ago!
 
   [TARGET]
           Where to create the exercise directory. Default: temporary directory
