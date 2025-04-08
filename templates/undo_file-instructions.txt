@@ -1,0 +1,4 @@
+Oh shit, I need to undo my changes to a file!
+I want bla.txt to be as it was before the 'fix: fix things' commit!
+See https://ohshitgit.com/#undo-a-file
+For more help use the tips.txt file.
