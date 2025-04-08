@@ -4,6 +4,7 @@ pub mod latest_message;
 pub mod committed_to_main;
 pub mod committed_to_wrong;
 pub mod undo_commit;
+pub mod undo_file;
 use clap::{Parser, ValueEnum};
 
 #[derive(Parser)]
@@ -35,7 +36,9 @@ enum Exo {
     /// Oh shit, I accidentally committed to the wrong branch!
     CommittedToWrong,
     /// Oh shit, I need to undo a commit from like 5 commits ago!
-    UndoCommit
+    UndoCommit,
+    /// Oh shit, I need to undo my changes to a file!
+    UndoFile
 }
 
 fn main() {
@@ -61,6 +64,9 @@ fn main() {
         }
         Exo::UndoCommit => {
             undo_commit::exo(target);
+        }
+        Exo::UndoFile => {
+            undo_file::exo(target);
         }
     }
 }
