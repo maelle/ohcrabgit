@@ -1,0 +1,4 @@
+Añade 'cosa 3' al archivo bla, pues guardalo.
+git add bla
+git commit --amend --no-edit
+Inspecciona la historia de Git.

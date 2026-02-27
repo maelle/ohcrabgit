@@ -1,0 +1,4 @@
+Inspecciona la historia de Git y los archivos.
+git clean -n -d
+git clean -f -d
+Inspecciona la historia de Git y los archivos.

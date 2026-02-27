@@ -1,0 +1,4 @@
+Et merde, je veux corriger le message de mon dernier commit !
+J'ai fait une faute de frappe !
+Voir https://ohshitgit.com/fr#corriger-dernier-message-commit
+Pour plus d'aide, utiliser le fichier tip.txt.

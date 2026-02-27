@@ -1,0 +1,4 @@
+Mierda, accidentalmente hice commit a la rama equivocada!
+Queria que mi ultimo commit, que crea bla, fuese en la rama feat-bla, no en la rama hot-fix !
+Ver https://ohshitgit.com/es#commit-accidental-en-rama-equivocada
+Para más ayuda, utilizar el archivo tip.txt.

@@ -1,0 +1,4 @@
+Examine Git history and your files.
+git clean -n -d
+git clean -f -d
+Examine Git history and your files.

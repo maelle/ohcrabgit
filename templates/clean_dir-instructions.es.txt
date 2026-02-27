@@ -1,0 +1,4 @@
+Uy, cómo elimino de una vez todos estos archivos de depuración ?
+Quiero eliminar la carpeta 'debugging' y los archivos 'debug'.
+Ver https://git-scm.com/docs/git-clean
+Para más ayuda, utilizar el archivo tip.txt.

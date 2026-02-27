@@ -1,0 +1,4 @@
+Et merde, j'ai commité sur le main alors que ça aurait dû aller sur une nouvelle branche !
+Je voulais que mon dernier commit, celui qui crée bla, soit sur une nouvelle branche !
+Voir https://ohshitgit.com/fr#erreur-commit-master
+Pour plus d'aide, utiliser le fichier tip.txt.

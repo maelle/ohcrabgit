@@ -1,4 +1,4 @@
 Examine Git history.
-git checkout [saved hash] -- bla.txt
+git restore bla.txt --source=[saved hash] or git checkout [saved hash] -- bla.txt
 git commit -m 'no need to copy-paste yay'
 Examine Git history and your files.

@@ -1,0 +1,4 @@
+Examiner l'historique Git.
+Remarquer que 'documennnt' devrait être 'document' ! Une faute de frappe !
+git commit --amend ou git commit --amend -m 'document'
+Examiner l'historique Git.

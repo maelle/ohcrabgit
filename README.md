@@ -30,23 +30,36 @@ Arguments:
           Name of the exercise
 
           Possible values:
-          - small-change:   Oh shit, I committed and immediately realized I need to make one small change!
-          - latest-message: Oh shit, I need to change the message on my last commit!
-          - time-machine:   Oh shit, I did something terribly wrong, please tell me git has a magic time machine!?!
-          - committed-to-main: Oh shit, I accidentally committed something to master that should have been on a brand new branch!
+          - time-machine:       Oh shit, I did something terribly wrong, please tell me git has a magic time machine!?!
+          - small-change:       Oh shit, I committed and immediately realized I need to make one small change!
+          - latest-message:     Oh shit, I need to change the message on my last commit!
+          - committed-to-main:  Oh shit, I accidentally committed something to master that should have been on a brand new branch!
           - committed-to-wrong: Oh shit, I accidentally committed to the wrong branch!
           - undo-commit:        Oh shit, I need to undo a commit from like 5 commits ago!
           - undo-file:          Oh shit, I need to undo my changes to a file!
+          - clean-dir:          Hey, how do I remove all my debugging left-over stuff at once?
 
   [TARGET]
           Where to create the exercise directory. Default: temporary directory
-          
+
           [default: tempdir]
+
+Options:
+      --lang <LANG>
+          Language (default: auto-detected from system locale)
+
+          [possible values: en, fr, es]
+
+  -h, --help
+          Print help (see a summary with '-h')
+
+  -V, --version
+          Print version
 
 Examples:
 
-`zut small-change` creates the small-change exercise folder in a temporary folder.
-`zut latest-message ..` creates the latest-message exercise folder in the parent of the current folder.
+  zut small-change  creates the small-change exercise folder in a temporary folder.
+  zut latest-message ..  creates the latest-message exercise folder in the parent of the current folder.
 ```
 
 ## Why the name

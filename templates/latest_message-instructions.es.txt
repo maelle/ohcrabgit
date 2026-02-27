@@ -1,0 +1,4 @@
+¡Mierda, quiero corregir el mensaje de mi último commit!
+¡He cometido un error tipográfico!
+Ver https://ohshitgit.com/es#cambio-mensage-ultimo-commit
+Para más ayuda, utilizar el archivo tip.txt.

@@ -1,4 +1,4 @@
 Examine Git history.
 Notice 'documennnt' should be 'document'! A typo!
-git commit --amend}
+git commit --amend or git commit --amend -m 'document'
 Examine Git history.

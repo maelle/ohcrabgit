@@ -1,0 +1,3 @@
+Inspecciona la historia de Git.
+git revert <hash-you-see>
+Inspecciona la historia de Git y los archivos.

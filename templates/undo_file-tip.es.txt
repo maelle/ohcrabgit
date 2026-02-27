@@ -1,0 +1,4 @@
+Inspecciona la historia de Git.
+git restore bla.txt --source=[saved hash] o git checkout [saved hash] -- bla.txt
+git commit -m 'no need to copy-paste yay'
+Inspecciona la historia de Git y los archivos.
