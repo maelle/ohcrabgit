@@ -23,7 +23,7 @@ cargo install --git https://github.com/maelle/zut
 - `time-machine` — Oh shit, I did something terribly wrong, please tell me git has a magic time machine!?!
 - `small-change` — Oh shit, I committed and immediately realized I need to make one small change!
 - `latest-message` — Oh shit, I need to change the message on my last commit!
-- `committed-to-main` — Oh shit, I accidentally committed something to master that should have been on a brand new branch!
+- `committed-to-main` — Oh shit, I accidentally committed something to main that should have been on a brand new branch!
 - `committed-to-wrong` — Oh shit, I accidentally committed to the wrong branch!
 - `undo-commit` — Oh shit, I need to undo a commit from like 5 commits ago!
 - `undo-file` — Oh shit, I need to undo my changes to a file!

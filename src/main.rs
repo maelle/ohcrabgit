@@ -51,7 +51,7 @@ enum Exo {
     SmallChange,
     /// Oh shit, I need to change the message on my last commit!
     LatestMessage,
-    /// Oh shit, I accidentally committed something to master that should have been on a brand new branch!
+    /// Oh shit, I accidentally committed something to main that should have been on a brand new branch!
     CommittedToMain,
     /// Oh shit, I accidentally committed to the wrong branch!
     CommittedToWrong,
