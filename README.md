@@ -51,9 +51,7 @@ Examples:
 ## Why the name
 
 Many exercises follow ["Oh shit, Git!"](https://ohshitgit.com/) by Katie Sylor-Miller.
-"Oh crap, Git!" would mean the same.
-"Oh crab, Git!" refers to Rust. :crab:
-I am open to changing the name to something easier to type later on.
+"zut" is a nice French curseword.
 
 ## Dev notes
 
