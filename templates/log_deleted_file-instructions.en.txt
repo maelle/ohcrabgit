@@ -1,0 +1,4 @@
+I want to find which commit deleted a file!
+Find which commit deleted script.txt!
+See https://git-scm.com/docs/git-log
+For more help use the tip.txt file.

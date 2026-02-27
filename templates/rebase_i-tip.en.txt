@@ -1,0 +1,4 @@
+Examine Git history.
+Find the rebase commit with: git merge-base feature main
+git rebase -i <commit-id> as many times as you need (once to reorder, once to squash, etc).
+Examine Git history and your files.

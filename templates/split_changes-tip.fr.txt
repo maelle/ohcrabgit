@@ -1,0 +1,16 @@
+Examiner l'index de Git.
+git add --patch pour ajouter un premier morceau
+  's' pour diviser le morceau
+  'y' pour ajouter le morceau à l'index
+  'd' pour n'ajouter aucun autre morceau à l'index
+  Facultatif : '?' pour voir l'aide
+git commit -m "Premier changement"
+git add --patch pour ajouter un deuxième morceau
+  's' pour diviser le morceau
+  'y' pour ajouter le morceau à l'index
+  'n' pour ignorer les autres
+  Facultatif : '?' pour voir l'aide
+git commit -m "Deuxième changement"
+git add script.txt pour ajouter le dernier morceau
+git commit -m "Troisième changement"
+Examiner l'historique de Git.

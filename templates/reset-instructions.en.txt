@@ -1,0 +1,4 @@
+Hey I want the commit history of the feature branch to look smarter!
+I can undo the commits and keep the changes in the files.
+See https://masalmon.eu/2024/06/11/rewrite-git-history/
+For more help use the tip.txt file.

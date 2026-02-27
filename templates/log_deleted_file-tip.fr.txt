@@ -1,0 +1,3 @@
+Examiner l'historique Git.
+git log --oneline
+git log --oneline -- script.txt

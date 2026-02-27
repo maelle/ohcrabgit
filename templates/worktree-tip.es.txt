@@ -1,0 +1,6 @@
+Inspecciona la historia de Git.
+git worktree add ../v2 v2
+Abre ../v2/flowers.txt
+git worktree list
+git worktree remove ../v2
+git worktree list

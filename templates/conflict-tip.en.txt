@@ -1,0 +1,7 @@
+Examine Git history.
+git merge feature on the default branch
+Edit script.txt to the desired state, remove conflict markers.
+git add script.txt
+git commit
+See the merge finalize, you might need to edit a commit message.
+Examine Git history.

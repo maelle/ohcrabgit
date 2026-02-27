@@ -1,0 +1,5 @@
+Examiner l'historique Git.
+Trouver le dernier commit avant les changements.
+git reset --mixed <commit-id>
+Faire un commit par fichier.
+Examiner l'historique Git et les fichiers.

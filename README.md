@@ -16,51 +16,34 @@ cargo install --git https://github.com/maelle/zut
 
 ## Current exercises
 
-To see help
+18 exercises in 3 categories. Run `zut --help` for the full list.
 
-```
-zut --help
-```
+### Oh shit, Git!
 
-```
-Usage: zut <EXO>[TARGET]. In the exercise folder, open instructions.txt.
+- `time-machine` — Oh shit, I did something terribly wrong, please tell me git has a magic time machine!?!
+- `small-change` — Oh shit, I committed and immediately realized I need to make one small change!
+- `latest-message` — Oh shit, I need to change the message on my last commit!
+- `committed-to-main` — Oh shit, I accidentally committed something to master that should have been on a brand new branch!
+- `committed-to-wrong` — Oh shit, I accidentally committed to the wrong branch!
+- `undo-commit` — Oh shit, I need to undo a commit from like 5 commits ago!
+- `undo-file` — Oh shit, I need to undo my changes to a file!
 
-Arguments:
-  <EXO>
-          Name of the exercise
+### Clean history
 
-          Possible values:
-          - time-machine:       Oh shit, I did something terribly wrong, please tell me git has a magic time machine!?!
-          - small-change:       Oh shit, I committed and immediately realized I need to make one small change!
-          - latest-message:     Oh shit, I need to change the message on my last commit!
-          - committed-to-main:  Oh shit, I accidentally committed something to master that should have been on a brand new branch!
-          - committed-to-wrong: Oh shit, I accidentally committed to the wrong branch!
-          - undo-commit:        Oh shit, I need to undo a commit from like 5 commits ago!
-          - undo-file:          Oh shit, I need to undo my changes to a file!
-          - clean-dir:          Hey, how do I remove all my debugging left-over stuff at once?
+- `split-changes` — Hey I'd like to split these changes to the same file into several commits!
+- `clean-dir` — Hey, how do I remove all my debugging left-over stuff at once?
+- `conflict` — Hey I'd like to see what merge conflicts look like!
+- `rebase-i` — Hey I'd like to make my commits in a branch look informative and smart!
+- `reset` — Hey I'd like to restart from scratch and reorganize my commits!
 
-  [TARGET]
-          Where to create the exercise directory. Default: temporary directory
+### Use history
 
-          [default: tempdir]
-
-Options:
-      --lang <LANG>
-          Language (default: auto-detected from system locale)
-
-          [possible values: en, fr, es]
-
-  -h, --help
-          Print help (see a summary with '-h')
-
-  -V, --version
-          Print version
-
-Examples:
-
-  zut small-change  creates the small-change exercise folder in a temporary folder.
-  zut latest-message ..  creates the latest-message exercise folder in the parent of the current folder.
-```
+- `bisect` — Hey I'd like to find which commit introduced a bug!
+- `log-deleted-file` — I want to find which commit deleted a file!
+- `log-deleted-line` — I want to find which commit deleted a line!
+- `revparse` — I want to understand ancestry references like HEAD~5 and HEAD^^!
+- `blame` — I want to find who added a specific line and when!
+- `worktree` — I need to see what the project looked like at a certain version!
 
 ## Why the name
 

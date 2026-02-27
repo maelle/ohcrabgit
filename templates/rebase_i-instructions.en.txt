@@ -1,0 +1,5 @@
+Hey I want the commit history of the feature branch to look smarter!
+I made many small commits as I was figuring things out.
+Now I want the commits to tell a story, not a story of how many mistakes I made!
+See https://www.digitalocean.com/community/tutorials/how-to-rebase-and-update-a-pull-request
+For more help use the tip.txt file.

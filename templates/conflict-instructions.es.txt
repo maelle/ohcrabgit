@@ -1,0 +1,4 @@
+Quiero fusionar (merge) la rama feature a la rama main.
+Voy a tener que ocuparme de un 'merge conflict'.
+Ve https://happygitwithr.com/git-branches.html#dealing-with-conflicts
+Para más ayuda, usa el archivo tip.txt.

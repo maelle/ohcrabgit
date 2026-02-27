@@ -1,0 +1,7 @@
+Examiner l'historique Git.
+git merge feature sur la branche par défaut
+Modifier script.txt jusqu'à ce qu'il soit comme on le souhaite, retirer les marqueurs de conflit.
+git add script.txt
+git commit
+Regarder la fusion se finaliser, éventuellement modifier un message de commit.
+Examiner l'historique Git.

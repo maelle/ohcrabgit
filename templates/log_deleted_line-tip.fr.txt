@@ -1,0 +1,4 @@
+Examiner l'historique Git.
+git log --oneline
+git log -S"iris" flowers.txt
+git log -G"iris" flowers.txt

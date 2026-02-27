@@ -1,0 +1,4 @@
+Quiero encontrar qué commit eliminó una línea!
+Encuentra qué commit eliminó la línea "iris" del archivo flowers.txt!
+Ve https://git-scm.com/docs/git-log
+Para más ayuda, usa el archivo tip.txt.

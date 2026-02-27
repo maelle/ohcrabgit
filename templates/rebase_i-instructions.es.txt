@@ -1,0 +1,5 @@
+Uy, quiero que la historia de git de la rama feature parezca más inteligente!
+Hice muchos commits pequeños mientras trabajaba.
+Quiero que los commits cuenten una historia, no la historia de mis errores!
+Ve https://www.digitalocean.com/community/tutorials/how-to-rebase-and-update-a-pull-request
+Para más ayuda, usa el archivo tip.txt.

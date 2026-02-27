@@ -1,0 +1,16 @@
+Examine the Git staging area.
+git add --patch to add a first chunk
+  's' to split the chunk
+  'y' to stage the first chunk
+  'd' to discard the others
+  Optionally, '?' to see the help
+git commit -m "First change"
+git add --patch to add a second chunk
+  's' to split the chunk
+  'y' to stage the second chunk
+  'n' to skip the others
+  Optionally, '?' to see the help
+git commit -m "Second change"
+git add script.txt to add the last chunk
+git commit -m "Third change"
+Examine Git history.

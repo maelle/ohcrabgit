@@ -1,0 +1,4 @@
+Je veux fusionner la branche feature dans la branche main.
+Je vais devoir m'occuper d'un 'merge conflict'.
+Voir https://happygitwithr.com/git-branches.html#dealing-with-conflicts
+Pour plus d'aide, utiliser le fichier tip.txt.

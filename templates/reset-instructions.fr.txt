@@ -1,0 +1,4 @@
+Hum, je veux que l'historique de commits de la branche feature semble plus malin !
+Je peux défaire les commits tout en gardant les changements dans les fichiers.
+Voir https://masalmon.eu/2024/06/11/rewrite-git-history/
+Pour plus d'aide, utiliser le fichier tip.txt.
