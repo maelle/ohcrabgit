@@ -1,0 +1,5 @@
+Inspecciona la historia de Git.
+Encuentra el último commit antes de los cambios.
+git reset --mixed <commit-id>
+Hacer un commit para cada archivo.
+Inspecciona la historia de Git y los archivos.

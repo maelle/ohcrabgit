@@ -1,0 +1,5 @@
+¿Desde cuando no funciona mi script script.sh?
+Alguien introdujo una línea "aaaaaaaaah" que lo hace fallar.
+Tengo que usar git bisect para encontrar qué commit introdujo el error.
+Ve https://git-scm.com/docs/git-bisect
+Para más ayuda, usa el archivo tip.txt.

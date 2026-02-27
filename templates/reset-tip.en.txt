@@ -1,0 +1,5 @@
+Examine Git history.
+Find the last commit before the changes.
+git reset --mixed <commit-id>
+Do one commit per file.
+Examine Git history and your files.

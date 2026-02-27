@@ -1,0 +1,4 @@
+Uy, quiero que la historia de git de la rama feature parezca más inteligente!
+Puedo deshacer los commits pero conservar los cambios en los archivos.
+Ve https://masalmon.eu/2024/06/11/rewrite-git-history/
+Para más ayuda, usa el archivo tip.txt.

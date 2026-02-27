@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(cargo build 2>&1)"
+      "Bash(cargo build 2>&1)",
+      "Bash(cargo test bisect 2>&1)"
     ]
   }
 }

@@ -1,0 +1,7 @@
+Inspecciona la historia de Git.
+git merge feature en la rama por defecto
+Modificar script.txt hasta que sea como quieres, suprimir los marcadores de conflicto.
+git add script.txt
+git commit
+Mira como se finaliza el merge, si se necesita modifica un mensaje de commit.
+Inspecciona la historia de Git.

@@ -1,0 +1,5 @@
+Hey, since when has my script script.sh stopped working?
+Someone introduced a line "aaaaaaaaah" that causes it to fail.
+I need to use git bisect to find which commit introduced the bug.
+See https://git-scm.com/docs/git-bisect
+For more help use the tip.txt file.

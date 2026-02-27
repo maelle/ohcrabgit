@@ -1,0 +1,4 @@
+Quiero saber cómo era flowers.txt en el tag v2!
+Crea una carpeta con el proyecto como era en el tag v2.
+Ve https://masalmon.eu/2024/01/23/git-worktree/
+Para más ayuda, usa el archivo tip.txt.

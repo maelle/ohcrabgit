@@ -1,0 +1,4 @@
+Hum je voudrais répartir ces changements du même fichier en plusieurs commits !
+Je veux enregistrer mes 3 changements à script.txt en 3 commits pas 1.
+Voir https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging#_staging_patches
+Pour plus d'aide, utiliser le fichier tip.txt.

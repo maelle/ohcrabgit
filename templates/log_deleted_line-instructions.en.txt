@@ -1,0 +1,4 @@
+I want to find which commit deleted a line!
+Find which commit deleted the line "iris" from flowers.txt!
+See https://git-scm.com/docs/git-log
+For more help use the tip.txt file.

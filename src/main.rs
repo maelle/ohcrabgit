@@ -6,6 +6,16 @@ pub mod committed_to_wrong;
 pub mod undo_commit;
 pub mod undo_file;
 pub mod clean_dir;
+pub mod split_changes;
+pub mod conflict;
+pub mod rebase_i;
+pub mod reset;
+pub mod bisect;
+pub mod log_deleted_file;
+pub mod log_deleted_line;
+pub mod revparse;
+pub mod blame;
+pub mod worktree;
 use clap::builder::styling::{AnsiColor, Effects, Styles};
 use clap::{CommandFactory, FromArgMatches, Parser, ValueEnum};
 use colored::Colorize;
@@ -34,6 +44,7 @@ struct Cli {
 
 #[derive(Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ValueEnum)]
 enum Exo {
+    // Oh shit, Git!
     /// Oh shit, I did something terribly wrong, please tell me git has a magic time machine!?!
     TimeMachine,
     /// Oh shit, I committed and immediately realized I need to make one small change!
@@ -48,16 +59,44 @@ enum Exo {
     UndoCommit,
     /// Oh shit, I need to undo my changes to a file!
     UndoFile,
+    // Clean history
+    /// Hey I'd like to split these changes to the same file into several commits!
+    SplitChanges,
     /// Hey, how do I remove all my debugging left-over stuff at once?
     CleanDir,
+    /// Hey I'd like to see what merge conflicts look like!
+    Conflict,
+    /// Hey I'd like to make my commits in a branch look informative and smart! (interactive rebase)
+    RebaseI,
+    /// Hey I'd like to restart from scratch and reorganize my commits! (git reset --mixed)
+    Reset,
+    // Use history
+    /// Hey I'd like to find which commit introduced a bug!
+    Bisect,
+    /// I want to find which commit deleted a file!
+    LogDeletedFile,
+    /// I want to find which commit deleted a line!
+    LogDeletedLine,
+    /// I want to understand ancestry references like HEAD~5 and HEAD^^!
+    Revparse,
+    /// I want to find who added a specific line and when!
+    Blame,
+    /// I need to see what the project looked like at a certain version!
+    Worktree,
 }
 
 fn main() {
     let after_help = format!(
         "Examples:\n\n  {sc}  creates the small-change exercise folder in a temporary folder.\
-         \n  {lm}  creates the latest-message exercise folder in the parent of the current folder.",
+         \n  {lm}  creates the latest-message exercise folder in the parent of the current folder.\
+         \n\nCategories:\n\n  {oh}:\n    time-machine, small-change, latest-message, committed-to-main,\n    committed-to-wrong, undo-commit, undo-file\
+         \n\n  {ch}:\n    split-changes, clean-dir, conflict, rebase-i, reset\
+         \n\n  {uh}:\n    bisect, log-deleted-file, log-deleted-line, revparse, blame, worktree",
         sc = "zut small-change".blue().bold(),
         lm = "zut latest-message ..".blue().bold(),
+        oh = "Oh shit, Git!".bold(),
+        ch = "Clean history".bold(),
+        uh = "Use history".bold(),
     );
     let cmd = Cli::command().after_help(after_help);
     let matches = cmd.get_matches();
@@ -90,6 +129,36 @@ fn main() {
         }
         Exo::CleanDir => {
             clean_dir::exo(target, &lang);
+        }
+        Exo::SplitChanges => {
+            split_changes::exo(target, &lang);
+        }
+        Exo::Conflict => {
+            conflict::exo(target, &lang);
+        }
+        Exo::RebaseI => {
+            rebase_i::exo(target, &lang);
+        }
+        Exo::Reset => {
+            reset::exo(target, &lang);
+        }
+        Exo::Bisect => {
+            bisect::exo(target, &lang);
+        }
+        Exo::LogDeletedFile => {
+            log_deleted_file::exo(target, &lang);
+        }
+        Exo::LogDeletedLine => {
+            log_deleted_line::exo(target, &lang);
+        }
+        Exo::Revparse => {
+            revparse::exo(target, &lang);
+        }
+        Exo::Blame => {
+            blame::exo(target, &lang);
+        }
+        Exo::Worktree => {
+            worktree::exo(target, &lang);
         }
     }
 }

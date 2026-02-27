@@ -1,0 +1,4 @@
+Examiner l'historique Git.
+Trouver le commit pour le rebase avec : git merge-base feature main
+git rebase -i <commit-id> autant de fois que nécessaire (une fois pour changer l'ordre, une fois pour écraser des commits ensemble, etc).
+Examiner l'historique Git et les fichiers.

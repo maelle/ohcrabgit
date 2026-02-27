@@ -1,0 +1,4 @@
+Quiero entender las referencias de ascendencia!
+Encuentra el identificador y el mensaje del commit HEAD~5 y HEAD^^.
+Ve https://git-scm.com/book/be/v2/Git-Tools-Revision-Selection.html#_ancestry_references
+Para más ayuda, usa el archivo tip.txt.

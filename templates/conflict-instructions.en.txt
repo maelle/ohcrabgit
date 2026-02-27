@@ -1,0 +1,4 @@
+I want to merge the feature branch into main.
+I will need to fix a merge conflict.
+See https://happygitwithr.com/git-branches.html#dealing-with-conflicts
+For more help use the tip.txt file.

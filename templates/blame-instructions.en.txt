@@ -1,0 +1,4 @@
+I want to find who added a specific line!
+Find who added the line "x <- x + 1" to script.txt and when!
+See https://git-scm.com/docs/git-blame
+For more help use the tip.txt file.

@@ -1,0 +1,4 @@
+Je veux trouver quel commit a supprimé un fichier !
+Trouve quel commit a supprimé script.txt !
+Voir https://git-scm.com/docs/git-log
+Pour plus d'aide, utiliser le fichier tip.txt.

@@ -1,0 +1,5 @@
+Hum, je veux que l'historique de commits de la branche feature semble plus malin !
+J'ai fait plein de petits commits en tâtonnant.
+Je veux que les commits racontent une belle histoire, pas l'histoire de mes erreurs !
+Voir https://www.digitalocean.com/community/tutorials/how-to-rebase-and-update-a-pull-request
+Pour plus d'aide, utiliser le fichier tip.txt.

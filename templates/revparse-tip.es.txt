@@ -1,0 +1,5 @@
+Examina el historial de Git.
+git rev-parse HEAD~5
+git show HEAD~5
+git rev-parse HEAD^^
+git show HEAD^^

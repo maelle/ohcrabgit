@@ -1,0 +1,11 @@
+Ejecuta sh script.sh para probar el estado actual (error = bug presente).
+git bisect start
+git bisect bad  (la versión actual no funciona)
+git bisect good <first-commit-SHA>  (la primera versión funcionaba)
+A cada etapa ejecuta sh script.sh y escribe:
+  git bisect bad  si hay un error
+  git bisect good  si funciona
+Continuar hasta que git bisect te muestre al culpable.
+O salta los pasos manuales con: git bisect run sh script.sh
+git bisect reset para salir del modo.
+Inspecciona la diff Git del commit culpable.

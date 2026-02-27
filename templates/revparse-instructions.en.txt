@@ -1,0 +1,4 @@
+I want to understand ancestry references!
+Find the commit ID and message for HEAD~5 and HEAD^^.
+See https://git-scm.com/book/be/v2/Git-Tools-Revision-Selection.html#_ancestry_references
+For more help use the tip.txt file.
