@@ -47,9 +47,10 @@ enum Exo {
 
 fn main() {
     let after_help = format!(
-        "Examples:\n\n  {}  creates the small-change exercise folder in a temporary folder.\n  {}  creates the latest-message exercise folder in the parent of the current folder.",
-        "ohcrabgit small-change".blue().bold(),
-        "ohcrabgit latest-message ..".blue().bold(),
+        "Examples:\n\n  {sc}  creates the small-change exercise folder in a temporary folder.\
+         \n  {lm}  creates the latest-message exercise folder in the parent of the current folder.",
+        sc = "ohcrabgit small-change".blue().bold(),
+        lm = "ohcrabgit latest-message ..".blue().bold(),
     );
     let cmd = Cli::command().after_help(after_help);
     let matches = cmd.get_matches();
