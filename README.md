@@ -8,10 +8,11 @@ The goal of zut is for me to learn a bit of Rust by re-creating my [saperlipopet
 
 ## Installation
 
-This needs to be improved. :sweat_smile:
+Requires [Rust](https://doc.rust-lang.org/book/ch01-01-installation.html) (Cargo comes with Rust).
 
-- The binary for zut is built at each commit, on GitHub Actions, and available as an artifact.
-- You can build zut from source using `cargo build --release`. This means having to [install Rust](https://doc.rust-lang.org/book/ch01-01-installation.html) (Cargo comes with Rust). Then you run `cargo install --path`.
+```
+cargo install --git https://github.com/maelle/zut
+```
 
 ## Current exercises
 
