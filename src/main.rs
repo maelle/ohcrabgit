@@ -22,9 +22,9 @@ struct Cli {
     /// Name of the exercise
     #[arg(value_enum)]
     exo: Exo,
-    #[arg(default_value = "tempdir")]
     /// Where to create the exercise directory. Default: temporary directory.
-    target: Option<String>
+    #[arg(default_value = "tempdir")]
+    target: String
 }
 
 #[derive(Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ValueEnum)]
@@ -56,7 +56,7 @@ fn main() {
     let matches = cmd.get_matches();
     let cli = Cli::from_arg_matches(&matches).unwrap_or_else(|e| e.exit());
 
-    let target = cli.target.unwrap();
+    let target = cli.target;
 
     match cli.exo {
         Exo::SmallChange => {
