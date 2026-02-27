@@ -17,7 +17,7 @@ const STYLES: Styles = Styles::styled()
 
 #[derive(Parser)]
 #[command(version, about, long_about = None, styles = STYLES)]
-#[clap(override_usage = "ohcrabgit <EXO>[TARGET]. In the exercise folder, open instructions.txt.")]
+#[clap(override_usage = "zut <EXO>[TARGET]. In the exercise folder, open instructions.txt.")]
 struct Cli {
     /// Name of the exercise
     #[arg(value_enum)]
@@ -49,8 +49,8 @@ fn main() {
     let after_help = format!(
         "Examples:\n\n  {sc}  creates the small-change exercise folder in a temporary folder.\
          \n  {lm}  creates the latest-message exercise folder in the parent of the current folder.",
-        sc = "ohcrabgit small-change".blue().bold(),
-        lm = "ohcrabgit latest-message ..".blue().bold(),
+        sc = "zut small-change".blue().bold(),
+        lm = "zut latest-message ..".blue().bold(),
     );
     let cmd = Cli::command().after_help(after_help);
     let matches = cmd.get_matches();

@@ -1,28 +1,28 @@
 
-# ohcrabgit
+# zut
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of ohcrabgit is for me to learn a bit of Rust by re-creating my [saperlipopette](https://docs.ropensci.org/saperlipopette/) R package as a CLI called "ohcrabgit".
+The goal of zut is for me to learn a bit of Rust by re-creating my [saperlipopette](https://docs.ropensci.org/saperlipopette/) R package as a CLI called "zut".
 
 ## Installation
 
 This needs to be improved. :sweat_smile:
 
-- The binary for ohcrabgit is built at each commit, on GitHub Actions, and available as an artifact.
-- You can build ohcrabgit from source using `cargo build --release`. This means having to [install Rust](https://doc.rust-lang.org/book/ch01-01-installation.html) (Cargo comes with Rust). Then you run `cargo install --path`.
+- The binary for zut is built at each commit, on GitHub Actions, and available as an artifact.
+- You can build zut from source using `cargo build --release`. This means having to [install Rust](https://doc.rust-lang.org/book/ch01-01-installation.html) (Cargo comes with Rust). Then you run `cargo install --path`.
 
 ## Current exercises
 
 To see help
 
 ```
-ohcrabgit --help
+zut --help
 ```
 
 ```
-Usage: ohcrabgit <EXO>[TARGET]. In the exercise folder, open instructions.txt.
+Usage: zut <EXO>[TARGET]. In the exercise folder, open instructions.txt.
 
 Arguments:
   <EXO>
@@ -44,8 +44,8 @@ Arguments:
 
 Examples:
 
-`ohcrabgit small-change` creates the small-change exercise folder in a temporary folder.
-`ohcrabgit latest-message ..` creates the latest-message exercise folder in the parent of the current folder.
+`zut small-change` creates the small-change exercise folder in a temporary folder.
+`zut latest-message ..` creates the latest-message exercise folder in the parent of the current folder.
 ```
 
 ## Why the name
@@ -57,7 +57,7 @@ I am open to changing the name to something easier to type later on.
 
 ## Dev notes
 
-Use `--` as separator between arguments for cargo and arguments for ohcrabgit.
+Use `--` as separator between arguments for cargo and arguments for zut.
 
 ```
 cargo run -- small-change

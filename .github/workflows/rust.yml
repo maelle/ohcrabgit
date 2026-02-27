@@ -25,5 +25,5 @@ jobs:
       run: cargo test --verbose
     - uses: actions/upload-artifact@v4
       with:
-        name: ohcrabgit-binary-${{ matrix.os }}
-        path: target/release/ohcrabgit
+        name: zut-binary-${{ matrix.os }}
+        path: target/release/zut

@@ -11,7 +11,7 @@ pub fn create_target(
     let parent_path = if target == "tempdir" {
         let tmp_dir = env::temp_dir();
         let random_string = rand::rng().random_range(1..1000001).to_string();
-        let random_path = "ohcrabgit".to_string() + &random_string;
+        let random_path = "zut".to_string() + &random_string;
         tmp_dir.join(random_path)
     } else {
         Path::new(&target).to_path_buf()

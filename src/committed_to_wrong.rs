@@ -1,7 +1,7 @@
 use std::fs;
 use std::fs::File;
-use ohcrabgit::git;
-use ohcrabgit::path;
+use zut::git;
+use zut::path;
 
 
 pub fn exo(
