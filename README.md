@@ -67,6 +67,10 @@ Examples:
 Many exercises follow ["Oh shit, Git!"](https://ohshitgit.com/) by Katie Sylor-Miller.
 "zut" is a nice French curseword.
 
+## Acknowledgements
+
+The exercises and their content are ported from the [saperlipopette](https://docs.ropensci.org/saperlipopette/) R package, co-authored by [Yanina Bellini Saibene](https://yabellini.netlify.app/) and [Jim Gardner](https://github.com/jimgar).
+
 ## Dev notes
 
 Use `--` as separator between arguments for cargo and arguments for zut.
