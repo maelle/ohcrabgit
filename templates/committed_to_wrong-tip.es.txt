@@ -1,0 +1,6 @@
+Inspecciona la historia de Git.
+git switch feat-bla o git checkout feat-bla
+git cherry-pick hot-fix
+git switch hot-fix o git checkout hot-fix
+git reset HEAD~ --hard
+Examina el historial Git de las ramas feat-bla y hot-fix.

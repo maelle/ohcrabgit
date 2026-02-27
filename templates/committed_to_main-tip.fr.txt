@@ -1,0 +1,7 @@
+Examiner l'historique Git.
+Vérifier qu'on est sur la branche main.
+git branch feat-bla
+Retourner sur la branche main, git switch main ou git checkout main
+git reset HEAD~ --hard
+git switch feat-bla ou git checkout feat-bla
+Examiner l'historique Git des branches main et feat-bla.

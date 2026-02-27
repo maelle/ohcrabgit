@@ -1,0 +1,6 @@
+Examiner l'historique Git.
+git switch feat-bla ou git checkout feat-bla
+git cherry-pick hot-fix
+git switch hot-fix ou git checkout hot-fix
+git reset HEAD~ --hard
+Examiner l'historique Git des branches feat-bla et hot-fix.

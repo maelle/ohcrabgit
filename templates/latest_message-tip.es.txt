@@ -1,0 +1,4 @@
+Inspecciona la historia de Git.
+Nota que 'documennnt' tendria que ser 'document' ! Error de tipeo !
+git commit --amend o git commit --amend -m 'document'
+Inspecciona la historia de Git.

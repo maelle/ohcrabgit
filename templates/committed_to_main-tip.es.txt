@@ -1,0 +1,7 @@
+Inspecciona la historia de Git.
+Comprueba que estamos en la rama main.
+git branch feat-bla
+Volver a la rama, git switch main o git checkout main
+git reset HEAD~ --hard
+git switch feat-bla o git checkout feat-bla
+Inspecciona la historia de Git de las ramas main y feat-bla.

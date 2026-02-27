@@ -1,0 +1,4 @@
+Et merde, je me suis trompé·e de branche pour mon commit !
+Je voulais que mon dernier commit, qui crée bla, soit sur la branche feat-bla, pas sur la branche hot-fix !
+Voir https://ohshitgit.com/fr#commit-dans-mauvaise-branche
+Pour plus d'aide, utiliser le fichier tip.txt.

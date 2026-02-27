@@ -1,0 +1,4 @@
+Et merde, je veux annuler un truc genre 5 commits en arrière !
+Je veux défaire mon commit 'fix: fix things' car il a cassé des trucs !
+Voir https://ohshitgit.com/fr#annuler-un-commit
+Pour plus d'aide, utiliser le fichier tip.txt.

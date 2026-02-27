@@ -1,0 +1,4 @@
+Mierda, necesito deshacer un commit que hice hace 5 commits!
+Quiero deshacer mi commit 'fix: fix things' porque rompió mi codigo !
+Ver https://ohshitgit.com/es#dehacer-un-commit
+Para más ayuda, utilizar el archivo tip.txt.

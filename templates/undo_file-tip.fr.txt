@@ -1,0 +1,4 @@
+Examiner l'historique Git.
+git restore bla.txt --source=[saved hash] ou git checkout [saved hash] -- bla.txt
+git commit -m 'no need to copy-paste yay'
+Examiner l'historique Git et les fichiers.

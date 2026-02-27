@@ -1,0 +1,4 @@
+Mierda, hice commit e inmediatamente me di cuenta que tenia que hacer un pequeño cambio!
+Queria listar 3 cosas en mi archivo bla, no 2 !
+Ver https://ohshitgit.com/es#cambiar-ultimo-commit
+Para más ayuda, utilizar el archivo tip.txt.

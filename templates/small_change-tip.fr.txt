@@ -1,0 +1,4 @@
+Ajouter 'chose 3' au fichier bla puis l'enregistrer.
+git add bla
+git commit --amend --no-edit
+Examiner l'historique Git.

@@ -1,15 +1,17 @@
 use std::fs;
 use std::fs::File;
 use zut::git;
+use zut::lang::Lang;
 use zut::path;
 
 
 pub fn exo(
-    target: String
+    target: String,
+    lang: &Lang,
 ) -> String {
 
     let parent_path = path::create_target(target);
-    let path = git::init_playground(&parent_path, "undo_commit");
+    let path = git::init_playground(&parent_path, "undo_commit", lang);
 
     // Create the Git mess :-)
     let fix = path.join("fix.txt");
@@ -36,11 +38,14 @@ pub fn exo(
     return path.to_str().unwrap().to_string();
 }
 
-#[test]
-fn it_works() {
-    let dir = exo("tempdir".to_string());
-    assert!(fs::exists(&dir).unwrap());
+#[cfg(test)]
+mod tests {
+    use super::*;
 
-    let git_dir = dir + "/.git";
-    assert!(fs::exists(&git_dir).unwrap());
+    #[test]
+    fn it_works() {
+        let dir = exo("tempdir".to_string(), &Lang::En);
+        assert!(fs::exists(&dir).unwrap());
+        assert!(fs::exists(format!("{}/.git", dir)).unwrap());
+    }
 }

@@ -1,0 +1,4 @@
+Mince, comment je supprime en un coup tous ces fichiers de débogage ?
+Je veux supprimer le dossier 'debugging' et les fichiers 'debug'.
+Voir https://git-scm.com/docs/git-clean/fr
+Pour plus d'aide, utiliser le fichier tip.txt.

@@ -1,0 +1,4 @@
+Et merde, je viens de commiter et il manque une toute petite modification !
+Je voulais lister 3 choses dans mon fichier bla, pas seulement 2 !
+Voir https://ohshitgit.com/fr#modifier-le-dernier-commit
+Pour plus d'aide, utiliser le fichier tip.txt.

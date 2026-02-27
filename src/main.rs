@@ -5,9 +5,11 @@ pub mod committed_to_main;
 pub mod committed_to_wrong;
 pub mod undo_commit;
 pub mod undo_file;
+pub mod clean_dir;
 use clap::builder::styling::{AnsiColor, Effects, Styles};
 use clap::{CommandFactory, FromArgMatches, Parser, ValueEnum};
 use colored::Colorize;
+use zut::lang::Lang;
 
 const STYLES: Styles = Styles::styled()
     .header(AnsiColor::Magenta.on_default().effects(Effects::BOLD))
@@ -24,7 +26,10 @@ struct Cli {
     exo: Exo,
     /// Where to create the exercise directory. Default: temporary directory.
     #[arg(default_value = "tempdir")]
-    target: String
+    target: String,
+    /// Language (default: auto-detected from system locale)
+    #[arg(long, value_enum)]
+    lang: Option<Lang>,
 }
 
 #[derive(Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ValueEnum)]
@@ -42,7 +47,9 @@ enum Exo {
     /// Oh shit, I need to undo a commit from like 5 commits ago!
     UndoCommit,
     /// Oh shit, I need to undo my changes to a file!
-    UndoFile
+    UndoFile,
+    /// Hey, how do I remove all my debugging left-over stuff at once?
+    CleanDir,
 }
 
 fn main() {
@@ -57,29 +64,32 @@ fn main() {
     let cli = Cli::from_arg_matches(&matches).unwrap_or_else(|e| e.exit());
 
     let target = cli.target;
+    let lang = Lang::resolve(cli.lang);
 
     match cli.exo {
         Exo::SmallChange => {
-            small_change::exo(target);
+            small_change::exo(target, &lang);
         }
         Exo::LatestMessage => {
-            latest_message::exo(target);
+            latest_message::exo(target, &lang);
         }
         Exo::TimeMachine => {
-            time_machine::exo(target);
+            time_machine::exo(target, &lang);
         }
         Exo::CommittedToMain => {
-            committed_to_main::exo(target);
+            committed_to_main::exo(target, &lang);
         }
         Exo::CommittedToWrong => {
-            committed_to_wrong::exo(target);
+            committed_to_wrong::exo(target, &lang);
         }
         Exo::UndoCommit => {
-            undo_commit::exo(target);
+            undo_commit::exo(target, &lang);
         }
         Exo::UndoFile => {
-            undo_file::exo(target);
+            undo_file::exo(target, &lang);
+        }
+        Exo::CleanDir => {
+            clean_dir::exo(target, &lang);
         }
     }
 }
-

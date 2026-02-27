@@ -1,0 +1,4 @@
+Mierda, necesito deshacer mis cambios en un archivo!
+Quiero que bla.txt sea como era antes del commit 'fix: fix things' !
+Ver https://ohshitgit.com/es#dehacer-un-commit
+Para más ayuda, utilizar el archivo tip.txt.

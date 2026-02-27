@@ -1,0 +1,4 @@
+Et merde, je veux annuler la modification d'un fichier !
+Je veux que bla.txt soit comme il était avant le commit 'fix: fix things' !
+Voir https://ohshitgit.com/fr#annuler-un-fichier
+Pour plus d'aide, utiliser le fichier tip.txt.

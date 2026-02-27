@@ -1,0 +1,4 @@
+Hey, how do I remove all my debugging left-over stuff at once?
+I want to remove the 'debugging' folder and the 'debug' files.
+See https://git-scm.com/docs/git-clean
+For more help use the tip.txt file.

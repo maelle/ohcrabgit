@@ -1,0 +1,5 @@
+Et merde, j'ai fait un truc horrible, par pitié dites-moi que git peut voyager dans le temps !?!
+J'ai accidentellement exécuté git reset hard donc j'ai perdu un commit important.
+Je veux le récupérer !
+Voir https://ohshitgit.com/fr#magic-time-machine
+Pour plus d'aide, utiliser le fichier tip.txt.

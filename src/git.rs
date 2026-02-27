@@ -5,6 +5,7 @@ use git2::Time;
 use time::macros::{datetime};
 use std::path::Path;
 use std::path::PathBuf;
+use crate::lang::Lang;
 
 pub fn repo_init (
     path: &PathBuf
@@ -104,7 +105,8 @@ pub fn reset_hard(
 pub fn init_playground(
     parent_path: &PathBuf,
     playground: &str,
-)-> PathBuf {
+    lang: &Lang,
+) -> PathBuf {
 
     let folder_str = "exo-".to_string() + &playground;
     let path = parent_path.join(folder_str);
@@ -118,11 +120,11 @@ pub fn init_playground(
     first_commit(&path, "git ignore");
 
     let instructions = path.join("instructions.txt");
-    let instructions_template = format!("templates/{}-instructions.txt", &playground.to_string());
+    let instructions_template = format!("templates/{}-instructions.{}.txt", &playground, lang.code());
     let _ = fs::copy(&instructions_template, &instructions);
 
     let tip = path.join("tip.txt");
-    let tip_template = format!("templates/{}-tip.txt", &playground.to_string());
+    let tip_template = format!("templates/{}-tip.{}.txt", &playground, lang.code());
     let _ = fs::copy(&tip_template, &tip);
 
     return path;

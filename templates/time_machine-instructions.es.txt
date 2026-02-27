@@ -1,0 +1,5 @@
+¡Mierda, hice algo terriblemente mal!, ¡por favor dime que git tiene una máquina del tiempo mágica!
+Ejecuté git reset hard por descuido y perdí un commit importante.
+¡Lo quiero recuperar!
+Ver https://ohshitgit.com/es#maquina-del-tiempo-magica
+Para más ayuda, utilizar el archivo tip.txt.

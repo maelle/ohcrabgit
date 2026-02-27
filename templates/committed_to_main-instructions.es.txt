@@ -1,0 +1,4 @@
+Mierda, accidentalmente hice commit de algo a main que debía haber sido en una rama nueva!
+Queria que mi ultimo commit, que crea bla, fuese en una rama nueva!
+Ver https://ohshitgit.com/es#commit-a-master-accidental
+Para más ayuda, utilizar el archivo tip.txt.
