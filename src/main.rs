@@ -5,15 +5,19 @@ pub mod committed_to_main;
 pub mod committed_to_wrong;
 pub mod undo_commit;
 pub mod undo_file;
-use clap::{Parser, ValueEnum};
+use clap::builder::styling::{AnsiColor, Effects, Styles};
+use clap::{CommandFactory, FromArgMatches, Parser, ValueEnum};
+use colored::Colorize;
+
+const STYLES: Styles = Styles::styled()
+    .header(AnsiColor::Magenta.on_default().effects(Effects::BOLD))
+    .usage(AnsiColor::Magenta.on_default().effects(Effects::BOLD))
+    .literal(AnsiColor::Blue.on_default().effects(Effects::BOLD))
+    .placeholder(AnsiColor::Cyan.on_default());
 
 #[derive(Parser)]
-#[command(version, about, long_about = None)]
+#[command(version, about, long_about = None, styles = STYLES)]
 #[clap(override_usage = "ohcrabgit <EXO>[TARGET]. In the exercise folder, open instructions.txt.")]
-#[clap(after_help = "Examples:
-
-`ohcrabgit small-change` creates the small-change exercise folder in a temporary folder.
-`ohcrabgit latest-message ..` creates the latest-message exercise folder in the parent of the current folder.")]
 struct Cli {
     /// Name of the exercise
     #[arg(value_enum)]
@@ -42,7 +46,14 @@ enum Exo {
 }
 
 fn main() {
-    let cli = Cli::parse();
+    let after_help = format!(
+        "Examples:\n\n  {}  creates the small-change exercise folder in a temporary folder.\n  {}  creates the latest-message exercise folder in the parent of the current folder.",
+        "ohcrabgit small-change".blue().bold(),
+        "ohcrabgit latest-message ..".blue().bold(),
+    );
+    let cmd = Cli::command().after_help(after_help);
+    let matches = cmd.get_matches();
+    let cli = Cli::from_arg_matches(&matches).unwrap_or_else(|e| e.exit());
 
     let target = cli.target.unwrap();
 
